@@ -1,0 +1,26 @@
+#root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.active {
+  color: tomato;
+  font-weight: bold;
+}
+
+#navbar {
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.logo {
+  object-fit: cover;
+  width: 3em;
+  height: 3em;
+  border-radius: 100%;
+}

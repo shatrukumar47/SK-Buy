@@ -1,0 +1,41 @@
+<div
+  class="max-w-sm bg-white border border-gray-200 rounded-lg shadow cursor-pointer"
+>
+  <img
+    (click)="viewDetails()"
+    class="rounded-t-lg lg:w-[250px] md:w-[200px] sm:w-[150px] lg:h-[300px] md:h-[250px] sm:h-[200px] m-auto object-fill"
+    src="{{ item.image }}"
+    alt=""
+  />
+  <div class="p-5">
+    <h5
+      class="mb-2 text-[20px] font-bold tracking-tight text-gray-900 dark:text-white"
+    >
+      {{ item.title.split(" ").slice(0, 3).join(" ") + "..." }}
+    </h5>
+    <p class="mb-1 text-[20px] font-bold text-green-500">₹{{ item.price }}</p>
+    <p class="mb-2 font-bold text-green-500">
+      In Stock : {{ item.rating.count }}
+    </p>
+    <span
+      class="block mb-1 bg-purple-100 text-purple-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300"
+      >Top Discount of the Sale</span
+    >
+    <span class="block mb-3 text-[13px]">Free delivery</span>
+    <div class="flex w-[100%] justify-evenly">
+      <div
+      (click)="handleWishlist()"
+        class="inline-flex gap-1 items-center px-3 py-2 text-sm font-medium text-center text-white bg-orange-500 rounded-lg hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-blue-800"
+      >
+        <i class="fa-solid fa-heart"></i>
+        <button>Wishlist</button>
+      </div>
+      <button
+      (click)="handleAddToCart()"
+        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>

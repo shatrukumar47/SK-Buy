@@ -1,0 +1,114 @@
+<div>
+  <div *ngIf="loading" id="loading-cont" class="min-h-screen flex justify-center items-center">
+    <app-loader></app-loader>
+  </div>
+
+  <div *ngIf="!loading"
+  class="w-[80%] min-h-screen m-auto flex justify-center items-center"
+>
+  <div
+    class="lg:min-w-[800px] md:min-w-[600px] sm:min-w-[400px] flex lg:flex-row md:flex-row sm:flex-col  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+  >
+    <img
+      class="rounded-t-lg object-cover m-auto lg:w-[450px] lg:h-[500px] md:w-[300px] md:h-[400px] sm:w-[300px] sm:h-[400px]"
+      src="{{ product.image }}"
+      alt=""
+    />
+    <div class="p-5">
+      <h5
+        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+      >
+        {{ product.title }}
+      </h5>
+      <p class="mb-3 font-bold text-gray-700 dark:text-gray-400">
+        {{ product.category.toUpperCase() }}
+      </p>
+      <h5
+        class="mb-2 text-2xl font-bold tracking-tight text-green-600 dark:text-white"
+      >
+        ₹{{ product.price }}
+      </h5>
+      <p class="mb-3 text-gray-700 dark:text-gray-400">
+        {{ product.description}}
+      </p>
+      <div class="flex items-center mt-2.5 mb-5">
+        <svg
+          class="w-4 h-4 text-yellow-300 mr-1"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 22 20"
+        >
+          <path
+            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+          />
+        </svg>
+        <svg
+          class="w-4 h-4 text-yellow-300 mr-1"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 22 20"
+        >
+          <path
+            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+          />
+        </svg>
+        <svg
+          class="w-4 h-4 text-yellow-300 mr-1"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 22 20"
+        >
+          <path
+            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+          />
+        </svg>
+        <svg
+          class="w-4 h-4 text-yellow-300 mr-1"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 22 20"
+        >
+          <path
+            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+          />
+        </svg>
+        <svg
+          class="w-4 h-4 text-gray-200 dark:text-gray-600"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 22 20"
+        >
+          <path
+            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+          />
+        </svg>
+        <span
+          class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3"
+          >5.0</span
+        >
+      </div>
+      <div class="w-[100%] flex mt-6 gap-3 ">
+        <button
+            (click)="handleWishlist()"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Wishlist
+        </button>
+
+        <button
+        (click)="handleBuyNow()"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Buy Now
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+

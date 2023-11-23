@@ -1,0 +1,8 @@
+<div class="min-h-screen lg:w-[80%] m-auto md:w-[95%] sm:w-[95%]">
+    <div *ngIf="loading" id="loading-cont" class="min-h-screen flex justify-center items-center">
+        <app-loader></app-loader>
+      </div>
+      <div *ngIf="!loading" class="w-[100%] m-auto mt-[40px] mb-[40px] grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-3">
+        <app-card-wishlist *ngFor="let item of wishlistData" [item]="item" [handleRemoveWishlist]="handleRemoveWishlist"></app-card-wishlist>
+      </div>
+</div>

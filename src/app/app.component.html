@@ -1,0 +1,41 @@
+<div id="root">
+  <!-- navbar -->
+  <nav id="navbar" class="bg-green-900">
+    <div class="w-[80%] m-auto flex lg:flex-row md:flex-row sm:flex-col justify-between items-center p-1">
+      <div class="flex items-center gap-1 cursor-pointer" (click)="handleLogoRoute()">
+        <img src="https://i.pinimg.com/originals/18/9d/dc/189ddc1221d9c1c779dda4ad37a35fa1.png" class="logo" alt="">
+        <h1 class="text-[25px] font-bold text-white">SK-Buy</h1>
+      </div>
+
+      <div class="flex gap-6 text-white text-[20px]">
+        <a routerLink="/" routerLinkActive="active" class="hover:text-orange-500">Products</a>
+        <a routerLink="/wishlist" routerLinkActive="active" class="hover:text-orange-500">
+          <i class="fa-solid fa-heart"></i>
+        </a>
+        <a routerLink="/cart" routerLinkActive="active" class="hover:text-orange-500">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </div>
+
+      <div *ngIf="!isAuth" class="flex gap-3">
+        <a routerLink="/login" type="button" class="focus:outline-none text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Login</a>
+        <a routerLink="/register" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Signup</a>
+      </div>
+      <div *ngIf="isAuth" class="flex gap-3">
+        <img class="w-10 h-10 rounded-full hover:cursor-pointer" (click)="handleProfileIcon()" src="{{avatar}}" alt="Avatar">
+        <button (click)="handleLogout()" type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- body -->
+  <div id="body-container" class="min-h-screen w-full m-auto">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- footer -->
+  <footer id="footer" class="bg-slate-600 p-5 flex gap-3 justify-center items-center">
+    <i (click)="handleGithub()" class="fa-brands fa-github text-[24px] cursor-pointer hover:text-orange-500"></i>
+    <span>shatrukumar47@gmail.com</span>
+  </footer>
+</div>

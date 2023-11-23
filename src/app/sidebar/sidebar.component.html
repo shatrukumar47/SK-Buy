@@ -1,0 +1,48 @@
+<div class="w-[250px] h-[600px] border-r-2 border-gray-200">
+    <div class="border-b-2 border-gray-200 mb-3 pb-3">
+        <h1 class="font-bold text-[20px] ml-3">FILTERS</h1>
+    </div>
+
+    <div class="border-b-2 border-gray-200 mb-3 pb-4 text-green-700">
+        <div class="flex gap-2 items-center ml-3 font-bold">
+            <input type="radio" name="category" id="all" value='' (change)="handleFilterCategory($event)" [(ngModel)]="categoryValue" class="accent-green-600" />
+            <label for="men">All</label>
+        </div>
+        <div class="flex gap-2 items-center ml-3 font-bold">
+            <input type="radio" name="category" id="men" value="men's clothing" (change)="handleFilterCategory($event)" [(ngModel)]="categoryValue" class="accent-green-600" />
+            <label for="men">Men</label>
+        </div>
+        <div class="flex gap-2 items-center ml-3 font-bold">
+            <input type="radio" name="category" id="women" value="women's clothing" (change)="handleFilterCategory($event)" [(ngModel)]="categoryValue" class="accent-green-600" />
+            <label for="women">Women</label>
+        </div>
+        <div class="flex gap-2 items-center ml-3 font-bold">
+            <input type="radio" name="category" id="electronics" value="electronics" (change)="handleFilterCategory($event)" [(ngModel)]="categoryValue" class="accent-green-600" />
+            <label for="electronics">Electronics</label>
+        </div>
+        <div class="flex gap-2 items-center ml-3 font-bold">
+            <input type="radio" name="category" id="jewelery" value="jewelery" (change)="handleFilterCategory($event)" [(ngModel)]="categoryValue" class="accent-green-600" />
+            <label for="jewelery">Jewellery</label>
+        </div>
+    </div>
+
+    <div class="border-b-2 border-gray-200 mb-3 pb-4 text-green-700">
+        <h1 class="font-bold text-[18px] ml-3 mb-3 text-black">Ratings</h1>
+        <div class="flex gap-2 items-center ml-3 font-bold">
+            <input type="radio" name="rating" value="1,2" (change)="handleRatingCateogry($event)" class="accent-green-600" />
+            <label for="rating">1-2 Star</label>
+        </div>
+        <div class="flex gap-2 items-center ml-3 font-bold">
+            <input type="radio" name="rating" value="2,3" (change)="handleRatingCateogry($event)" class="accent-green-600" />
+            <label for="rating">2-3 Star</label>
+        </div>
+        <div class="flex gap-2 items-center ml-3 font-bold">
+            <input type="radio" name="rating" value="3,4" (change)="handleRatingCateogry($event)" class="accent-green-600" />
+            <label for="rating">3-4 Star</label>
+        </div>
+        <div class="flex gap-2 items-center ml-3 font-bold">
+            <input type="radio" name="rating" value="4,5" (change)="handleRatingCateogry($event)" class="accent-green-600" />
+            <label for="rating">4-5 Star</label>
+        </div>
+    </div>
+</div>
